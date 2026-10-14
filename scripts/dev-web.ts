@@ -37,6 +37,12 @@
  * Each package keeps its own tsdown.config.ts untouched: this script layers
  * `watch` through API-level inline config (tsdown workspace mode fills inline
  * keys under each package's file config, and no package config defines it).
+ *
+ * This script launches through plain Node (`node scripts/dev-web.ts`), never
+ * through tsx: tsdown's `native` config loader registers import-without-cache's
+ * `module.registerHooks` hooks, whose load results Node rejects while tsx's
+ * loader hooks are also registered. Plain-Node type stripping limits the script
+ * to erasable TypeScript syntax.
  */
 import { globSync, readFileSync } from 'node:fs'
 import { dirname, join, resolve, sep } from 'node:path'
@@ -238,10 +244,15 @@ export class StageSupervisor {
   private readonly live = new Set<StageHandle>()
   private stopping = false
 
+  /** Reports a stage that exits before a stop was requested. */
+  private readonly onStale: (stage: string, code: number | null) => void
+
   /**
    * @param onStale - receives the stage name and exit code when a stage exits before a stop was requested.
    */
-  constructor(private readonly onStale: (stage: string, code: number | null) => void) {}
+  constructor(onStale: (stage: string, code: number | null) => void) {
+    this.onStale = onStale
+  }
 
   /**
    * Track one started stage until it exits.
