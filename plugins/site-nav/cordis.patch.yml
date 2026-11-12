@@ -1,0 +1,3 @@
+- insert:
+    - id: site-nav
+      name: '@local/site-nav'

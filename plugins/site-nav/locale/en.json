@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Site nav",
+    "description": "Categorized website bookmarks in the left sidebar; picking one, or typing /nav in the composer, opens it in the browser."
+  }
+}
