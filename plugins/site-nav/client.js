@@ -24,7 +24,7 @@ window.__ModuleLoader__.load({
     const PANEL_ID = 'sitenav'
     const STORAGE_KEY = 'dsh-sitenav.board.v1'
     /** Board schema version; version 1 boards gain the Trending category on read. */
-    const BOARD_VERSION = 4
+    const BOARD_VERSION = 6
     const COLORS = ['blue', 'teal', 'purple', 'orange', 'green', 'pink']
     /** Apple system palette used for category dots and card monograms. */
     const COLOR_HEX = {
@@ -237,6 +237,7 @@ window.__ModuleLoader__.load({
           ['MDN', 'https://developer.mozilla.org', 'Web 开发文档'],
           ['Vercel', 'https://vercel.com', '前端部署平台'],
           ['shadcn/ui', 'https://www.shadcn.net/zh', '现代化 React UI 组件库'],
+          ['DeepWiki', 'https://deepwiki.com', '把 GitHub 仓库生成可提问的 AI Wiki 文档'],
           ['MiMo', 'https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go', '小米 MiMo 按量计费定价'],
         ],
       },
@@ -323,6 +324,7 @@ window.__ModuleLoader__.load({
         color: 'orange',
         sites: [
           ["Tom's Hardware", 'https://www.tomshardware.com/pc-components/', 'PC 硬件评测与选购指南'],
+          ['dcheck.cn', 'https://dcheck.cn', '电脑检测：麦克风、摄像头、扬声器、键盘、鼠标、屏幕颜色，还能练打字、在线录音'],
         ],
       },
       {

@@ -15,9 +15,9 @@ renders the site itself.
 - **Categories.** Categories carry an Apple-system accent used for their rail
   dot, card monogram, and card hover border. Any category can be created inline
   in the rail and removed from its rail row. Ten categories ship by default —
-  AI (13), Design (18), Productivity (8), Learning (13), Developer (7),
-  Research (7), Tools (40), Social (6), 硬件与 PC (Tom's Hardware), and
-  Trending (Hugging Face Daily Papers, GitHub Trending), 115 sites in all.
+  AI (13), Design (18), Productivity (8), Learning (13), Developer (8),
+  Research (7), Tools (40), Social (6), 硬件与 PC (Tom's Hardware, dcheck.cn), and
+  Trending (Hugging Face Daily Papers, GitHub Trending), 117 sites in all.
   A board saved by an
   older build gains the categories and sites it predates once per board
   version, without touching user edits.
